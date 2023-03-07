@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Source+Serif+Pro:wght@700&display=swap" rel="stylesheet">
   @vite('resources/css/app.css')
+  <title>Daftar | Game Supply</title>
 </head>
 <body class="">
 <div class="flex items-center justify-end min-h-screen bg-colorregister">
@@ -35,8 +36,8 @@
                                 class="text-black w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
                 <div class="mt-4">
-                    <label class="block text-white" for="email">Email<label>
-                            <input type="text" placeholder="Email"
+                    <label class="block text-white" for="nomorTelepon">Nomor Telepon<label>
+                            <input type="text" placeholder="Nomor Telepon"
                                 class="text-black w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
                 <div class="mt-4">

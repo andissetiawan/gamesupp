@@ -13,7 +13,14 @@ module.exports = {
       'link' : '#5B8FB9',
       'black' :'#000'
     },
-    // extend: {},
+    extend: {
+     
+    },
   },
-  plugins: [],
+  variants: {
+    
+  },
+  plugins: [
+    
+  ],
 }

@@ -19,7 +19,7 @@
 
 
 </div>
-    
+
     <div class=" px-8 py-6 mx-4 mt-4 mr-20 text-left bg-square shadow-lg md:w-1/3 lg:w-1/3 sm:w-1/3 rounded-lg ">
         <h3 class="text-5xl font-bold text-center text-white">Daftar Sekarang</h3>
         <div class="mt-6 text-white text-center">
@@ -28,32 +28,33 @@
                         Masuk
                     </a>
                 </div>
-        <form action="">
+        <form action="{{ route('simpanregistrasi') }}" method="POST">
+            {{ csrf_field() }}
             <div class="mt-4">
                 <div>
                     <label class="block text-white" for="Username">Username<label>
-                            <input type="text" placeholder="Username"
+                            <input type="text" placeholder="Username" name="username"
                                 class="text-black w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
                 <div class="mt-4">
-                    <label class="block text-white" for="nomorTelepon">Nomor Telepon<label>
-                            <input type="text" placeholder="Nomor Telepon"
+                    <label class="block text-white" for="nomorTelepon">email<label>
+                            <input type="text" placeholder="email" name="email"
                                 class="text-black w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
                 <div class="mt-4">
                     <label class="block text-white">Password<label>
-                            <input type="password" placeholder="Password"
+                            <input type="password" placeholder="Password" name="pass"
                                 class="text-black w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
                 <div class="mt-4">
                     <label class="block text-white">Konfirmasi Password<label>
-                            <input type="password" placeholder="Password"
+                            <input type="password" placeholder="Password" name="konfpass"
                                 class=" text-black w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
                 <div class="flex">
-                    <button class="w-full px-6 py-2 mt-4 text-link bg-colorregister rounded-lg hover:bg-blue-900">Daftar</button>
+                    <button type="submit" class="w-full px-6 py-2 mt-4 text-link bg-colorregister rounded-lg hover:bg-blue-900">Daftar</button>
                 </div>
-                
+
             </div>
         </form>
     </div>

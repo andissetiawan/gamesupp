@@ -5,3 +5,15 @@ body {
 #tagregis {
     font-family: 'Source Serif Pro', serif;
 }
+
+.custom-input {
+  width: 1000px;
+}
+
+.hide-scroll-bar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scroll-bar::-webkit-scrollbar {
+  display: none;
+}

@@ -18,7 +18,7 @@
 <div id="tagregis" class="text-8xl mr-64 text-white">Kebutuhan</div>
 <div id="tagregis" class="text-8xl mr-64 text-white"> Game Anda</div>
 </div>
-    
+
     <div class=" px-8 py-6 mx-4 mt-4 mr-20 text-left bg-square shadow-lg md:w-1/3 lg:w-1/3 sm:w-1/3 rounded-lg ">
     <div style="display: flex; justify-content: space-between;">
   <div>
@@ -30,24 +30,25 @@
 </div>
 
 
-               <form action="">
+               <form action="{{route('proseslogin')}}" method="POST">
+                {{ csrf_field() }}
             <div class="mt-4">
                 <div>
-                    <label class="block text-white" for="Username">Username<label>
-                            <input type="text" placeholder="Username"
+                    <label class="block text-white" for="Email">Email<label>
+                            <input type="email" placeholder="email" name="email"
                                 class="text-black w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
-          
+
                 <div class="mt-4">
                     <label class="block text-white">Password<label>
-                            <input type="password" placeholder="Password"
+                            <input type="password" placeholder="Password" name="password"
                                 class="text-black w-full px-4 py-2 mt-2 border rounded-lg focus:outline-none focus:ring-1 focus:ring-blue-600">
                 </div>
-             
+
                 <div class="flex">
                     <button class="w-full px-6 py-2 mt-4 text-link bg-colorregister rounded-lg hover:bg-blue-900">Masuk</button>
                 </div>
-                
+
             </div>
         </form>
     </div>

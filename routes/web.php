@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,6 +24,10 @@ Route::get('/daftar', function () {
 Route::get('/masuk', function () {
     return view('login');
 });
+
+Route::post('/simpanregistrasi',[LoginController::class,'simpanregistrasi'])->name('simpanregistrasi');
+Route::post('/proseslogin',[LoginController::class,'proseslogin'])->name('proseslogin');
 Route::get('/otp', function () {
     return view('otp');
 });
+

@@ -1,5 +1,7 @@
 <?php
 
+use NunoMaduro\Collision\Provider;
+
 return [
 
     /*
@@ -39,6 +41,10 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
+        ],
+        'users' => [
+            'driver'=> 'session',
+            'provider'=> 'users',
         ],
     ],
 

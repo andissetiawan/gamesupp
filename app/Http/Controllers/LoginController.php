@@ -20,10 +20,21 @@ class LoginController extends Controller
     }
     public function proseslogin(Request $request){
         // dd($request->all());
-        if(Auth::attempt($request->only('email','password'))){
-            return redirect('otp');
+        $credentials = $request->validate([
+            'email'=> 'required|email',
+            'password'=> 'required'
+        ]);
+        if(Auth::attempt($credentials)){
+            $request->session()->regenerate();
+            return redirect()->intended('/');
         }
-        return redirect('login');
+        return redirect('masuk');
 
     }
+    public function proseslogout(Request $request){
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('masuk');
+        }
 }
